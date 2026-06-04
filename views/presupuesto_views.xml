@@ -2,99 +2,60 @@
 <odoo>
     <data>
 
-        <!-- Presupuesto Dental Form (standalone, no cross-model inheritance) -->
-        <record id="view_clinica_presupuesto_form" model="ir.ui.view">
-            <field name="name">clinica.presupuesto.form</field>
-            <field name="model">clinica.presupuesto</field>
+        <!-- Extend sale.order form to show dental budget fields -->
+        <record id="view_sale_order_clinica_presupuesto_form" model="ir.ui.view">
+            <field name="name">sale.order.clinica.presupuesto.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
-                <form string="Presupuesto Dental">
-                    <header>
-                        <button name="action_quotation_send" string="Enviar por Email"
-                                type="object" class="btn-primary"
-                                attrs="{'invisible': [('state', 'not in', ('draft','sent'))]}"/>
-                        <button name="action_confirm" string="Confirmar"
-                                type="object" class="btn-success"
-                                attrs="{'invisible': [('state', 'not in', ('draft','sent'))]}"/>
-                        <button name="action_cancel" string="Cancelar"
-                                type="object"
-                                attrs="{'invisible': [('state', 'in', ('cancel','done'))]}"/>
-                        <field name="state" widget="statusbar"
-                               statusbar_visible="draft,sent,sale,done"/>
-                    </header>
-                    <sheet>
-                        <div class="oe_title">
-                            <h2 class="text-muted">Presupuesto Dental</h2>
-                            <h1>
-                                <field name="name" readonly="1"/>
-                            </h1>
-                        </div>
-                        <group>
-                            <group string="Paciente">
-                                <field name="partner_id" string="Paciente"/>
-                                <field name="date_order" string="Fecha"/>
-                                <field name="tipo_presupuesto"/>
-                            </group>
-                            <group string="Totales">
-                                <field name="amount_untaxed" widget="monetary"/>
-                                <field name="amount_tax" widget="monetary"/>
-                                <field name="amount_total" widget="monetary"/>
-                            </group>
-                        </group>
-                        <notebook>
-                            <page string="Líneas del Presupuesto">
-                                <field name="order_line">
-                                    <list editable="bottom">
-                                        <field name="product_id"/>
-                                        <field name="name"/>
-                                        <field name="product_uom_qty"/>
-                                        <field name="price_unit"/>
-                                        <field name="tax_id" widget="many2many_tags"/>
-                                        <field name="price_subtotal" readonly="1"/>
-                                    </list>
-                                </field>
-                            </page>
-                            <page string="Notas Clínicas">
-                                <field name="notas_clinicas"
-                                       placeholder="Notas clínicas relacionadas con el presupuesto..."/>
-                            </page>
-                            <page string="Notas Internas">
-                                <field name="note"/>
-                            </page>
-                        </notebook>
-                    </sheet>
-                    <chatter/>
-                </form>
+                <!-- Badge "Presupuesto Dental" visible only when es_presupuesto_dental -->
+                <xpath expr="//div[@class='oe_title']//h1" position="before">
+                    <h2 class="text-muted"
+                        attrs="{'invisible': [('es_presupuesto_dental', '=', False)]}">
+                        Presupuesto Dental
+                    </h2>
+                </xpath>
+                <!-- Inject dental fields after partner_id -->
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="es_presupuesto_dental" invisible="1"/>
+                    <field name="tipo_presupuesto"
+                           attrs="{'invisible': [('es_presupuesto_dental', '=', False)]}"/>
+                </xpath>
+                <!-- Notas clínicas tab after other_info -->
+                <xpath expr="//page[@name='other_info']" position="after">
+                    <page string="Notas Clínicas" name="notas_clinicas_dental"
+                          attrs="{'invisible': [('es_presupuesto_dental', '=', False)]}">
+                        <field name="notas_clinicas"
+                               placeholder="Notas clínicas relacionadas con el presupuesto..."/>
+                    </page>
+                </xpath>
             </field>
         </record>
 
-        <!-- Presupuesto List -->
-        <record id="view_clinica_presupuesto_list" model="ir.ui.view">
-            <field name="name">clinica.presupuesto.list</field>
-            <field name="model">clinica.presupuesto</field>
+        <!-- Extend sale.order list to show dental budget fields -->
+        <record id="view_sale_order_clinica_presupuesto_list" model="ir.ui.view">
+            <field name="name">sale.order.clinica.presupuesto.list</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_quotation_tree_with_onboarding"/>
             <field name="arch" type="xml">
-                <list string="Presupuestos Dentales">
-                    <field name="name"/>
-                    <field name="partner_id" string="Paciente"/>
-                    <field name="date_order" string="Fecha"/>
-                    <field name="tipo_presupuesto"/>
-                    <field name="amount_total" widget="monetary"/>
-                    <field name="state" widget="badge"
-                           decoration-success="state in ('sale','done')"
-                           decoration-warning="state == 'draft'"
-                           decoration-info="state == 'sent'"/>
-                </list>
+                <xpath expr="//field[@name='partner_id']" position="after">
+                    <field name="tipo_presupuesto"
+                           attrs="{'invisible': [('es_presupuesto_dental', '=', False)]}"/>
+                    <field name="es_presupuesto_dental" column_invisible="1"/>
+                </xpath>
             </field>
         </record>
 
-        <!-- Presupuesto Action -->
+        <!-- Action: Dental Budgets — filters sale.order -->
         <record id="action_clinica_presupuesto" model="ir.actions.act_window">
             <field name="name">Presupuestos Dentales</field>
-            <field name="res_model">clinica.presupuesto</field>
+            <field name="res_model">sale.order</field>
             <field name="view_mode">list,form</field>
-            <field name="view_ids" eval="[(5, 0, 0),
-                (0, 0, {'view_mode': 'list', 'view_id': ref('view_clinica_presupuesto_list')}),
-                (0, 0, {'view_mode': 'form', 'view_id': ref('view_clinica_presupuesto_form')}),
-            ]"/>
+            <field name="domain">[('es_presupuesto_dental', '=', True)]</field>
+            <field name="context">{
+                'default_es_presupuesto_dental': True,
+                'search_default_es_presupuesto_dental': 1
+            }</field>
         </record>
 
     </data>

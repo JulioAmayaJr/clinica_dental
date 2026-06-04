@@ -31,7 +31,8 @@ class ClinicaPaciente(models.Model):
     tratamiento_ids = fields.One2many('clinica.tratamiento', 'paciente_id', string='Treatments')
     odontograma_ids = fields.One2many('clinica.odontograma', 'paciente_id', string='Odontograms')
     documento_medico_ids = fields.One2many('clinica.documento.medico', 'paciente_id', string='Medical Documents')
-    presupuesto_ids = fields.One2many('clinica.presupuesto', 'partner_id', string='Budgets')
+    presupuesto_ids = fields.One2many('sale.order', 'partner_id', string='Budgets',
+                                       domain=[('es_presupuesto_dental', '=', True)])
 
     @api.depends('fecha_nacimiento')
     def _compute_edad(self):
