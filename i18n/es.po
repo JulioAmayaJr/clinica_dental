@@ -1,13 +1,14 @@
-# Spanish translations for clinica_dental
-# Copyright (C) 2024 Clínica Dental Dev
-# This file is distributed under the same license as the clinica_dental package.
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* clinica_dental
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-01 00:00+0000\n"
-"PO-Revision-Date: 2024-01-01 00:00+0000\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2026-06-04 14:01+0000\n"
+"PO-Revision-Date: 2026-06-04 14:01+0000\n"
+"Last-Translator: Clínica Dental Dev\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -16,361 +17,1362 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: clinica_dental
-msgid "Is Patient"
-msgstr "Es Paciente"
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_paciente_form
+msgid "<span class=\"o_stat_text\">Nueva Cita</span>"
+msgstr "<span class=\"o_stat_text\">Nueva Cita</span>"
 
 #. module: clinica_dental
-msgid "Clinical History"
-msgstr "Historia Clínica"
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_cita_form
+msgid "<strong>⚠ Alergias del paciente:</strong>"
+msgstr "<strong>⚠ Alergias del paciente:</strong>"
 
 #. module: clinica_dental
-msgid "Date of Birth"
-msgstr "Fecha de Nacimiento"
+#: model:ir.model.fields.selection,name:clinica_dental.selection__res_partner__grupo_sanguineo__a+
+msgid "A+"
+msgstr "A+"
 
 #. module: clinica_dental
-msgid "Age"
-msgstr "Edad"
+#: model:ir.model.fields.selection,name:clinica_dental.selection__res_partner__grupo_sanguineo__a-
+msgid "A-"
+msgstr "A-"
 
 #. module: clinica_dental
-msgid "Gender"
-msgstr "Género"
+#: model:ir.model.fields.selection,name:clinica_dental.selection__res_partner__grupo_sanguineo__ab+
+msgid "AB+"
+msgstr "AB+"
 
 #. module: clinica_dental
-msgid "Male"
-msgstr "Masculino"
+#: model:ir.model.fields.selection,name:clinica_dental.selection__res_partner__grupo_sanguineo__ab-
+msgid "AB-"
+msgstr "AB-"
 
 #. module: clinica_dental
-msgid "Female"
-msgstr "Femenino"
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__message_needaction
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__message_needaction
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__message_needaction
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__message_needaction
+msgid "Action Needed"
+msgstr "Acción Necesaria"
 
 #. module: clinica_dental
-msgid "Blood Type"
-msgstr "Grupo Sanguíneo"
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__activity_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__activity_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__activity_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__activity_ids
+msgid "Activities"
+msgstr "Actividades"
 
 #. module: clinica_dental
-msgid "Allergies"
-msgstr "Alergias"
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__activity_exception_decoration
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__activity_exception_decoration
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__activity_exception_decoration
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Decoración de Excepción de Actividad"
 
 #. module: clinica_dental
-msgid "Systemic Diseases"
-msgstr "Enfermedades Sistémicas"
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__activity_state
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__activity_state
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__activity_state
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__activity_state
+msgid "Activity State"
+msgstr "Estado de Actividad"
 
 #. module: clinica_dental
-msgid "Current Medications"
-msgstr "Medicamentos Actuales"
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__activity_type_icon
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__activity_type_icon
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__activity_type_icon
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Ícono del Tipo de Actividad"
 
 #. module: clinica_dental
-msgid "Smoker"
-msgstr "Fumador"
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_documento_medico_form
+msgid "Adjuntos"
+msgstr "Adjuntos"
 
 #. module: clinica_dental
-msgid "Emergency Contact"
-msgstr "Contacto de Emergencia"
-
-#. module: clinica_dental
-msgid "Emergency Phone"
-msgstr "Teléfono de Emergencia"
-
-#. module: clinica_dental
-msgid "Dental Appointment"
-msgstr "Cita Dental"
-
-#. module: clinica_dental
-msgid "Patient"
-msgstr "Paciente"
-
-#. module: clinica_dental
-msgid "Dentist"
-msgstr "Dentista"
-
-#. module: clinica_dental
-msgid "Start Date"
-msgstr "Fecha de Inicio"
-
-#. module: clinica_dental
-msgid "End Date"
-msgstr "Fecha de Fin"
-
-#. module: clinica_dental
-msgid "Duration (hours)"
-msgstr "Duración (horas)"
-
-#. module: clinica_dental
-msgid "Reason"
-msgstr "Motivo"
-
-#. module: clinica_dental
-msgid "Appointment Type"
-msgstr "Tipo de Cita"
-
-#. module: clinica_dental
-msgid "Consultation"
-msgstr "Consulta"
-
-#. module: clinica_dental
-msgid "Cleaning"
-msgstr "Limpieza"
-
-#. module: clinica_dental
-msgid "Extraction"
-msgstr "Extracción"
-
-#. module: clinica_dental
-msgid "Orthodontics"
-msgstr "Ortodoncia"
-
-#. module: clinica_dental
-msgid "Root Canal"
-msgstr "Endodoncia"
-
-#. module: clinica_dental
-msgid "Prosthetics"
-msgstr "Prótesis"
-
-#. module: clinica_dental
-msgid "Aesthetics"
-msgstr "Estética"
-
-#. module: clinica_dental
-msgid "Emergency"
-msgstr "Urgencia"
-
-#. module: clinica_dental
-msgid "Follow-up"
-msgstr "Control"
-
-#. module: clinica_dental
-msgid "Scheduled"
-msgstr "Agendada"
-
-#. module: clinica_dental
-msgid "Confirmed"
-msgstr "Confirmada"
-
-#. module: clinica_dental
-msgid "In Progress"
-msgstr "En Proceso"
-
-#. module: clinica_dental
-msgid "Completed"
-msgstr "Completada"
-
-#. module: clinica_dental
-msgid "Cancelled"
-msgstr "Cancelada"
-
-#. module: clinica_dental
-msgid "No Show"
-msgstr "No Asistió"
-
-#. module: clinica_dental
-msgid "Dental Odontogram"
-msgstr "Odontograma Dental"
-
-#. module: clinica_dental
-msgid "General Notes"
-msgstr "Notas Generales"
-
-#. module: clinica_dental
-msgid "Draft"
-msgstr "Borrador"
-
-#. module: clinica_dental
-msgid "Tooth Number"
-msgstr "Número de Pieza"
-
-#. module: clinica_dental
-msgid "Healthy"
-msgstr "Sano"
-
-#. module: clinica_dental
-msgid "Cavity"
-msgstr "Caries"
-
-#. module: clinica_dental
-msgid "Fracture"
-msgstr "Fractura"
-
-#. module: clinica_dental
-msgid "Missing"
-msgstr "Ausente"
-
-#. module: clinica_dental
-msgid "Crown"
-msgstr "Corona"
-
-#. module: clinica_dental
-msgid "Implant"
-msgstr "Implante"
-
-#. module: clinica_dental
-msgid "Extraction Indicated"
-msgstr "Extracción Indicada"
-
-#. module: clinica_dental
-msgid "Filling"
-msgstr "Obturación"
-
-#. module: clinica_dental
-msgid "Occlusal"
-msgstr "Oclusal"
-
-#. module: clinica_dental
-msgid "Vestibular"
-msgstr "Vestibular"
-
-#. module: clinica_dental
-msgid "Lingual"
-msgstr "Lingual"
-
-#. module: clinica_dental
-msgid "Mesial"
-msgstr "Mesial"
-
-#. module: clinica_dental
-msgid "Distal"
-msgstr "Distal"
-
-#. module: clinica_dental
-msgid "Cervical"
-msgstr "Cervical"
-
-#. module: clinica_dental
-msgid "Dental Treatment"
-msgstr "Tratamiento Dental"
-
-#. module: clinica_dental
-msgid "Treatment Type"
-msgstr "Tipo de Tratamiento"
-
-#. module: clinica_dental
-msgid "Whitening"
-msgstr "Blanqueamiento"
-
-#. module: clinica_dental
-msgid "X-Ray"
-msgstr "Radiografía"
-
-#. module: clinica_dental
-msgid "Planned"
-msgstr "Planificado"
-
-#. module: clinica_dental
-msgid "Medical Document"
-msgstr "Documento Médico"
-
-#. module: clinica_dental
-msgid "Document Name"
-msgstr "Nombre del Documento"
-
-#. module: clinica_dental
-msgid "Document Type"
-msgstr "Tipo de Documento"
-
-#. module: clinica_dental
-msgid "Periapical X-Ray"
-msgstr "Radiografía Periapical"
-
-#. module: clinica_dental
-msgid "Panoramic X-Ray"
-msgstr "Radiografía Panorámica"
-
-#. module: clinica_dental
-msgid "Bitewing X-Ray"
-msgstr "Radiografía Bitewing"
-
-#. module: clinica_dental
-msgid "Cephalometric X-Ray"
-msgstr "Radiografía Cefalométrica"
-
-#. module: clinica_dental
-msgid "Intraoral Photo"
-msgstr "Fotografía Intraoral"
-
-#. module: clinica_dental
-msgid "Extraoral Photo"
-msgstr "Fotografía Extraoral"
-
-#. module: clinica_dental
-msgid "Informed Consent"
-msgstr "Consentimiento Informado"
-
-#. module: clinica_dental
-msgid "Prescription"
-msgstr "Receta"
-
-#. module: clinica_dental
-msgid "Lab Results"
-msgstr "Resultados de Laboratorio"
-
-#. module: clinica_dental
-msgid "Uploaded By"
-msgstr "Subido Por"
-
-#. module: clinica_dental
-msgid "Directed To (Dentist)"
-msgstr "Dirigido A (Dentista)"
-
-#. module: clinica_dental
-msgid "Pending Review"
-msgstr "Pendiente de Revisión"
-
-#. module: clinica_dental
-msgid "Reviewed"
-msgstr "Revisado"
-
-#. module: clinica_dental
-msgid "Archived"
-msgstr "Archivado"
-
-#. module: clinica_dental
-msgid "Confidential"
-msgstr "Confidencial"
-
-#. module: clinica_dental
-msgid "Dentist Notes"
-msgstr "Notas del Dentista"
-
-#. module: clinica_dental
-msgid "Dental Budget"
-msgstr "Presupuesto Dental"
-
-#. module: clinica_dental
-msgid "Budget Type"
-msgstr "Tipo de Presupuesto"
-
-#. module: clinica_dental
-msgid "Preventive"
-msgstr "Preventivo"
-
-#. module: clinica_dental
-msgid "Corrective"
-msgstr "Correctivo"
-
-#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__sale_order__tipo_presupuesto__estetico
 msgid "Aesthetic"
 msgstr "Estético"
 
 #. module: clinica_dental
-msgid "Orthodontic"
-msgstr "Ortodóntico"
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_cita__tipo_cita__estetica
+msgid "Aesthetics"
+msgstr "Estética"
 
 #. module: clinica_dental
-msgid "Receptionist"
-msgstr "Recepcionista"
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__edad
+#: model:ir.model.fields,field_description:clinica_dental.field_res_users__edad
+msgid "Age"
+msgstr "Edad"
 
 #. module: clinica_dental
-msgid "Radiologist / Assistant"
-msgstr "Radiólogo / Asistente"
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__alergias
+#: model:ir.model.fields,field_description:clinica_dental.field_res_users__alergias
+msgid "Allergies"
+msgstr "Alergias"
 
 #. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_paciente_form
+msgid "Antecedentes Médicos"
+msgstr "Antecedentes Médicos"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__cita_id
+msgid "Appointment"
+msgstr "Cita"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__tipo_cita
+msgid "Appointment Type"
+msgstr "Tipo de Cita"
+
+#. module: clinica_dental
+#. odoo-python
+#: code:addons/clinica_dental/models/clinica_cita.py:0
+msgid "Appointment: %s - %s"
+msgstr "Cita: %s - %s"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__cita_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_res_users__cita_ids
+msgid "Appointments"
+msgstr "Citas"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_documento_medico_form
+msgid "Archivar"
+msgstr "Archivar"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_documento_medico__state__archivado
+msgid "Archived"
+msgstr "Archivado"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_documento_medico_form
+msgid "Archivos Adjuntos Adicionales"
+msgstr "Archivos Adjuntos Adicionales"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__message_attachment_count
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__message_attachment_count
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__message_attachment_count
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__message_attachment_count
+msgid "Attachment Count"
+msgstr "Cantidad de Adjuntos"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__adjunto_ids
+msgid "Attachments"
+msgstr "Adjuntos"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__res_partner__grupo_sanguineo__b+
+msgid "B+"
+msgstr "B+"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__res_partner__grupo_sanguineo__b-
+msgid "B-"
+msgstr "B-"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_documento_medico__tipo_documento__radiografia_bitewing
+msgid "Bitewing X-Ray"
+msgstr "Radiografía Bitewing"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__grupo_sanguineo
+#: model:ir.model.fields,field_description:clinica_dental.field_res_users__grupo_sanguineo
+msgid "Blood Type"
+msgstr "Grupo Sanguíneo"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_sale_order__tipo_presupuesto
+msgid "Budget Type"
+msgstr "Tipo de Presupuesto"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__presupuesto_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_res_users__presupuesto_ids
+msgid "Budgets"
+msgstr "Presupuestos"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__calendar_event_id
+msgid "Calendar Event"
+msgstr "Evento de Calendario"
+
+#. module: clinica_dental
+#: model:res.groups,comment:clinica_dental.group_radiologo
+msgid ""
+"Can create and upload medical documents. Can only see documents they "
+"uploaded."
+msgstr ""
+"Puede crear y subir documentos médicos. Solo puede ver los documentos que "
+"subió."
+
+#. module: clinica_dental
+#: model:res.groups,comment:clinica_dental.group_recepcionista
+msgid ""
+"Can create/edit patients and appointments. Cannot see confidential documents"
+" or edit dentist notes."
+msgstr ""
+"Puede crear/editar pacientes y citas. No puede ver documentos confidenciales"
+" ni editar notas del dentista."
+
+#. module: clinica_dental
+#: model:res.groups,comment:clinica_dental.group_dentista
+msgid ""
+"Can view and edit all patient records, add dentist notes and mark documents "
+"as reviewed."
+msgstr ""
+"Puede ver y editar todos los registros de pacientes, agregar notas del "
+"dentista y marcar documentos como revisados."
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_cita_form
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_tratamiento_form
+msgid "Cancelar"
+msgstr "Cancelar"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_cita__state__cancelada
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_tratamiento__state__cancelado
+msgid "Cancelled"
+msgstr "Cancelada"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_odontograma_linea__estado__caries
+msgid "Cavity"
+msgstr "Caries"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_documento_medico__tipo_documento__radiografia_cefalometrica
+msgid "Cephalometric X-Ray"
+msgstr "Radiografía Cefalométrica"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_odontograma_linea__superficie__cervical
+msgid "Cervical"
+msgstr "Cervical"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_cita_form
+msgid "Cita Dental"
+msgstr "Cita Dental"
+
+#. module: clinica_dental
+#: model:ir.actions.act_window,name:clinica_dental.action_clinica_cita
+#: model:ir.ui.menu,name:clinica_dental.menu_clinica_citas
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_cita_calendar
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_cita_list
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_paciente_form
+msgid "Citas"
+msgstr "Citas"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_cita__tipo_cita__limpieza
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_tratamiento__tipo_tratamiento__limpieza
+msgid "Cleaning"
+msgstr "Limpieza"
+
+#. module: clinica_dental
+#: model:res.groups,name:clinica_dental.group_admin
 msgid "Clinic Administrator"
 msgstr "Administrador de Clínica"
 
 #. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__historia_clinica
+#: model:ir.model.fields,field_description:clinica_dental.field_res_users__historia_clinica
+msgid "Clinical History"
+msgstr "Historia Clínica"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__notas_clinicas
+#: model:ir.model.fields,field_description:clinica_dental.field_sale_order__notas_clinicas
+msgid "Clinical Notes"
+msgstr "Notas Clínicas"
+
+#. module: clinica_dental
+#: model:ir.ui.menu,name:clinica_dental.menu_clinica_dental_root
+msgid "Clínica Dental"
+msgstr "Clínica Dental"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__color
+msgid "Color"
+msgstr "Color"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_cita_form
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_tratamiento_form
+msgid "Completar"
+msgstr "Completar"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_cita__state__completada
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_tratamiento__state__completado
+msgid "Completed"
+msgstr "Completada"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma_linea__estado
+msgid "Condition"
+msgstr "Condición"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__es_confidencial
+msgid "Confidential"
+msgstr "Confidencial"
+
+#. module: clinica_dental
+#: model:ir.ui.menu,name:clinica_dental.menu_clinica_configuracion
+msgid "Configuración"
+msgstr "Configuración"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_cita_form
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_odontograma_form
+msgid "Confirmar"
+msgstr "Confirmar"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_cita__state__confirmada
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_odontograma__state__confirmado
+msgid "Confirmed"
+msgstr "Confirmada"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_cita__tipo_cita__consulta
+msgid "Consultation"
+msgstr "Consulta"
+
+#. module: clinica_dental
+#: model:ir.model,name:clinica_dental.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_paciente_form
+msgid "Contacto de Emergencia"
+msgstr "Contacto de Emergencia"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__sale_order__tipo_presupuesto__correctivo
+msgid "Corrective"
+msgstr "Correctivo"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__create_uid
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__create_uid
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__create_uid
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma_linea__create_uid
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__create_date
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__create_date
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__create_date
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma_linea__create_date
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_odontograma_linea__estado__corona
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_tratamiento__tipo_tratamiento__corona
+msgid "Crown"
+msgstr "Corona"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__medicamentos_actuales
+#: model:ir.model.fields,field_description:clinica_dental.field_res_users__medicamentos_actuales
+msgid "Current Medications"
+msgstr "Medicamentos Actuales"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__fecha
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__fecha
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__fecha
+msgid "Date"
+msgstr "Fecha"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__fecha_nacimiento
+#: model:ir.model.fields,field_description:clinica_dental.field_res_users__fecha_nacimiento
+msgid "Date of Birth"
+msgstr "Fecha de Nacimiento"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_paciente_form
+msgid "Datos Personales"
+msgstr "Datos Personales"
+
+#. module: clinica_dental
+#: model:ir.model,name:clinica_dental.model_clinica_cita
+msgid "Dental Appointment"
+msgstr "Cita Dental"
+
+#. module: clinica_dental
+#: model:ir.model,name:clinica_dental.model_clinica_odontograma
+msgid "Dental Odontogram"
+msgstr "Odontograma Dental"
+
+#. module: clinica_dental
+#: model:ir.model,name:clinica_dental.model_clinica_tratamiento
+msgid "Dental Treatment"
+msgstr "Tratamiento Dental"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__dentista_id
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__dentista_id
+#: model:res.groups,name:clinica_dental.group_dentista
+msgid "Dentist"
+msgstr "Dentista"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__notas_dentista
+msgid "Dentist Notes"
+msgstr "Notas del Dentista"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_documento_medico_form
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_tratamiento_form
+msgid "Descripción"
+msgstr "Descripción"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_tratamiento_form
+msgid "Descripción del tratamiento..."
+msgstr "Descripción del tratamiento..."
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__descripcion
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__descripcion
+msgid "Description"
+msgstr "Descripción"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_documento_medico_form
+msgid "Destino"
+msgstr "Destino"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_tratamiento_form
+msgid "Detalle del Tratamiento"
+msgstr "Detalle del Tratamiento"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__dentista_id
+msgid "Directed To (Dentist)"
+msgstr "Dirigido a (Dentista)"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__display_name
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__display_name
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__display_name
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma_linea__display_name
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__display_name
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__display_name
+#: model:ir.model.fields,field_description:clinica_dental.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Nombre para Mostrar"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_odontograma_linea__superficie__distal
+msgid "Distal"
+msgstr "Distal"
+
+#. module: clinica_dental
+#. odoo-python
+#: code:addons/clinica_dental/models/clinica_documento_medico.py:0
+msgid "Document <b>%s</b> has been reviewed by %s."
+msgstr "El documento <b>%s</b> ha sido revisado por %s."
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__nombre
+msgid "Document Name"
+msgstr "Nombre del Documento"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__tipo_documento
+msgid "Document Type"
+msgstr "Tipo de Documento"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_documento_medico_form
+msgid "Documento Médico"
+msgstr "Documento Médico"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_paciente_form
+msgid "Documento médico"
+msgstr "Documento médico"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_documento_medico_list
+msgid "Documentos Médicos"
+msgstr "Documentos Médicos"
+
+#. module: clinica_dental
+#: model:ir.actions.act_window,name:clinica_dental.action_clinica_documento_medico_pendientes
+msgid "Documentos Pendientes"
+msgstr "Documentos Pendientes"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_documento_medico_pendientes_list
+msgid "Documentos Pendientes de Revisión"
+msgstr "Documentos Pendientes de Revisión"
+
+#. module: clinica_dental
+#: model:ir.actions.act_window,name:clinica_dental.action_clinica_documento_medico
+#: model:ir.ui.menu,name:clinica_dental.menu_clinica_documentos
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_paciente_form
+msgid "Documentos e Imágenes"
+msgstr "Documentos e Imágenes"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_odontograma__state__borrador
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__duracion
+msgid "Duration (hours)"
+msgstr "Duración (horas)"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_documento_medico_form
+msgid "El dentista agregará sus observaciones aquí..."
+msgstr "El dentista agregará sus observaciones aquí..."
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_cita__tipo_cita__urgencia
+msgid "Emergency"
+msgstr "Urgencia"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__contacto_emergencia
+#: model:ir.model.fields,field_description:clinica_dental.field_res_users__contacto_emergencia
+msgid "Emergency Contact"
+msgstr "Contacto de Emergencia"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__telefono_emergencia
+#: model:ir.model.fields,field_description:clinica_dental.field_res_users__telefono_emergencia
+msgid "Emergency Phone"
+msgstr "Teléfono de Emergencia"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_cita_form
+msgid "En Proceso"
+msgstr "En Proceso"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__fecha_fin
+msgid "End Date"
+msgstr "Fecha de Fin"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_paciente_form
+msgid "Es Paciente"
+msgstr "Es Paciente"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_cita__tipo_cita__extraccion
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_tratamiento__tipo_tratamiento__extraccion
+msgid "Extraction"
+msgstr "Extracción"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_odontograma_linea__estado__extraccion_indicada
+msgid "Extraction Indicated"
+msgstr "Extracción Indicada"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_documento_medico__tipo_documento__fotografia_extraoral
+msgid "Extraoral Photo"
+msgstr "Fotografía Extraoral"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__res_partner__genero__femenino
+msgid "Female"
+msgstr "Femenino"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_odontograma_linea__estado__obturacion
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_tratamiento__tipo_tratamiento__obturacion
+msgid "Filling"
+msgstr "Obturación"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_cita__tipo_cita__control
+msgid "Follow-up"
+msgstr "Control"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__message_follower_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__message_follower_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__message_follower_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__message_follower_ids
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__message_partner_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__message_partner_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__message_partner_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seguidores (Contactos)"
+
+#. module: clinica_dental
+#: model:ir.model.fields,help:clinica_dental.field_clinica_cita__activity_type_icon
+#: model:ir.model.fields,help:clinica_dental.field_clinica_documento_medico__activity_type_icon
+#: model:ir.model.fields,help:clinica_dental.field_clinica_odontograma__activity_type_icon
+#: model:ir.model.fields,help:clinica_dental.field_clinica_tratamiento__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Ícono Font Awesome ej. fa-tasks"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_odontograma_linea__estado__fractura
+msgid "Fracture"
+msgstr "Fractura"
+
+#. module: clinica_dental
+#: model:res.groups,comment:clinica_dental.group_admin
+msgid "Full access to all clinic data."
+msgstr "Acceso total a todos los datos de la clínica."
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__genero
+#: model:ir.model.fields,field_description:clinica_dental.field_res_users__genero
+msgid "Gender"
+msgstr "Género"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__notas_generales
+msgid "General Notes"
+msgstr "Notas Generales"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_cita_form
+msgid "Generar Venta"
+msgstr "Generar Venta"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__has_message
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__has_message
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__has_message
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__has_message
+msgid "Has Message"
+msgstr "Tiene Mensaje"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_odontograma_linea__estado__sano
+msgid "Healthy"
+msgstr "Sano"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_paciente_form
+msgid "Historia Clínica"
+msgstr "Historia Clínica"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_paciente_form
+msgid "Historia Clínica Detallada"
+msgstr "Historia Clínica Detallada"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_paciente_form
+msgid "Historia clínica detallada..."
+msgstr "Historia clínica detallada..."
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_cita_form
+msgid "Horario"
+msgstr "Horario"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__id
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__id
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__id
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma_linea__id
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__id
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__id
+#: model:ir.model.fields,field_description:clinica_dental.field_sale_order__id
+msgid "ID"
+msgstr "ID"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__activity_exception_icon
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__activity_exception_icon
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__activity_exception_icon
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__activity_exception_icon
+msgid "Icon"
+msgstr "Ícono"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__imagen_filename
+msgid "Image Filename"
+msgstr "Nombre del Archivo de Imagen"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_documento_medico_form
+msgid "Imagen / Archivo"
+msgstr "Imagen / Archivo"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_documento_medico_kanban
+msgid "Imagen del documento"
+msgstr "Imagen del documento"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_odontograma_linea__estado__implante
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_tratamiento__tipo_tratamiento__implante
+msgid "Implant"
+msgstr "Implante"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_cita__state__en_proceso
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_tratamiento__state__en_proceso
+msgid "In Progress"
+msgstr "En Proceso"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_paciente_form
+msgid "Información General"
+msgstr "Información General"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_cita_form
+msgid "Información de la Cita"
+msgstr "Información de la Cita"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_documento_medico_form
+msgid "Información del Documento"
+msgstr "Información del Documento"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_documento_medico__tipo_documento__consentimiento_informado
+msgid "Informed Consent"
+msgstr "Consentimiento Informado"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_tratamiento_form
+msgid "Iniciar"
+msgstr "Iniciar"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_documento_medico__tipo_documento__fotografia_intraoral
+msgid "Intraoral Photo"
+msgstr "Fotografía Intraoral"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_sale_order__es_presupuesto_dental
 msgid "Is Dental Budget"
 msgstr "Es Presupuesto Dental"
 
 #. module: clinica_dental
-msgid "Clinical Notes"
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__message_is_follower
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__message_is_follower
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__message_is_follower
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__message_is_follower
+msgid "Is Follower"
+msgstr "Es Seguidor"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__es_paciente
+#: model:ir.model.fields,field_description:clinica_dental.field_res_users__es_paciente
+msgid "Is Patient"
+msgstr "Es Paciente"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_documento_medico__tipo_documento__laboratorio
+msgid "Lab Results"
+msgstr "Resultados de Laboratorio"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__write_uid
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__write_uid
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__write_uid
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma_linea__write_uid
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__write_date
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__write_date
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__write_date
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma_linea__write_date
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__lineas_ids
+msgid "Lines"
+msgstr "Líneas"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_odontograma_linea__superficie__lingual
+msgid "Lingual"
+msgstr "Lingual"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__imagen_principal
+msgid "Main Image"
+msgstr "Imagen Principal"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__res_partner__genero__masculino
+msgid "Male"
+msgstr "Masculino"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_documento_medico_form
+msgid "Marcar como Revisado"
+msgstr "Marcar como Revisado"
+
+#. module: clinica_dental
+#: model:ir.model,name:clinica_dental.model_clinica_documento_medico
+msgid "Medical Document"
+msgstr "Documento Médico"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__documento_medico_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_res_users__documento_medico_ids
+msgid "Medical Documents"
+msgstr "Documentos Médicos"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_odontograma_linea__superficie__mesial
+msgid "Mesial"
+msgstr "Mesial"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__message_has_error
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__message_has_error
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__message_has_error
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__message_has_error
+msgid "Message Delivery error"
+msgstr "Error de entrega de mensaje"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__message_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__message_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__message_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__message_ids
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_odontograma_linea__estado__ausente
+msgid "Missing"
+msgstr "Ausente"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__my_activity_date_deadline
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__my_activity_date_deadline
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__my_activity_date_deadline
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Fecha límite de mi actividad"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__activity_calendar_event_id
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__activity_calendar_event_id
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__activity_calendar_event_id
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Evento de calendario de próxima actividad"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__activity_date_deadline
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__activity_date_deadline
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__activity_date_deadline
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Fecha límite de próxima actividad"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__activity_summary
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__activity_summary
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__activity_summary
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__activity_summary
+msgid "Next Activity Summary"
+msgstr "Resumen de próxima actividad"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__activity_type_id
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__activity_type_id
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__activity_type_id
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__activity_type_id
+msgid "Next Activity Type"
+msgstr "Tipo de próxima actividad"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_cita_form
+msgid "No Asistió"
+msgstr "No Asistió"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_cita__state__no_asistio
+msgid "No Show"
+msgstr "No Asistió"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_documento_medico_form
+msgid "Nombre del documento..."
+msgstr "Nombre del documento..."
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_cita_form
+msgid "Notas"
+msgstr "Notas"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_tratamiento_form
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_sale_order_clinica_presupuesto_form
+msgid "Notas Clínicas"
 msgstr "Notas Clínicas"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_odontograma_form
+msgid "Notas Generales"
+msgstr "Notas Generales"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_tratamiento_form
+msgid "Notas clínicas del dentista..."
+msgstr "Notas clínicas del dentista..."
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_sale_order_clinica_presupuesto_form
+msgid "Notas clínicas relacionadas con el presupuesto..."
+msgstr "Notas clínicas relacionadas con el presupuesto..."
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_cita_form
+msgid "Notas de la cita..."
+msgstr "Notas de la cita..."
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_documento_medico_form
+msgid "Notas del Dentista"
+msgstr "Notas del Dentista"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_documento_medico_form
+msgid "Notas sobre el documento o imagen..."
+msgstr "Notas sobre el documento o imagen..."
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__notas
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma_linea__notas
+msgid "Notes"
+msgstr "Notas"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__message_needaction_counter
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__message_needaction_counter
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__message_needaction_counter
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Número de Acciones"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__message_has_error_counter
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__message_has_error_counter
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__message_has_error_counter
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__message_has_error_counter
+msgid "Number of errors"
+msgstr "Número de errores"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__res_partner__grupo_sanguineo__o+
+msgid "O+"
+msgstr "O+"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__res_partner__grupo_sanguineo__o-
+msgid "O-"
+msgstr "O-"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_odontograma_form
+msgid "Observaciones generales del odontograma..."
+msgstr "Observaciones generales del odontograma..."
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_odontograma_linea__superficie__oclusal
+msgid "Occlusal"
+msgstr "Oclusal"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma_linea__odontograma_id
+msgid "Odontogram"
+msgstr "Odontograma"
+
+#. module: clinica_dental
+#: model:ir.model,name:clinica_dental.model_clinica_odontograma_linea
+msgid "Odontogram Line"
+msgstr "Línea de Odontograma"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_odontograma_form
+msgid "Odontograma"
+msgstr "Odontograma"
+
+#. module: clinica_dental
+#: model:ir.actions.act_window,name:clinica_dental.action_clinica_odontograma
+#: model:ir.ui.menu,name:clinica_dental.menu_clinica_odontogramas
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_odontograma_list
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_paciente_form
+msgid "Odontogramas"
+msgstr "Odontogramas"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__odontograma_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_res_users__odontograma_ids
+msgid "Odontograms"
+msgstr "Odontogramas"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__sale_order__tipo_presupuesto__ortodontico
+msgid "Orthodontic"
+msgstr "Ortodóntico"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_cita__tipo_cita__ortodoncia
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_tratamiento__tipo_tratamiento__ortodoncia
+msgid "Orthodontics"
+msgstr "Ortodoncia"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_cita__tipo_cita__otro
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_documento_medico__tipo_documento__otro
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_tratamiento__tipo_tratamiento__otro
+#: model:ir.model.fields.selection,name:clinica_dental.selection__res_partner__genero__otro
+msgid "Other"
+msgstr "Otro"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_tratamiento_form
+msgid "Paciente y Dentista"
+msgstr "Paciente y Dentista"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_cita_form
+msgid "Paciente..."
+msgstr "Paciente..."
+
+#. module: clinica_dental
+#: model:ir.actions.act_window,name:clinica_dental.action_clinica_paciente
+#: model:ir.ui.menu,name:clinica_dental.menu_clinica_pacientes
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_paciente_list
+msgid "Pacientes"
+msgstr "Pacientes"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_documento_medico__tipo_documento__radiografia_panoramica
+msgid "Panoramic X-Ray"
+msgstr "Radiografía Panorámica"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__paciente_id
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__paciente_id
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__paciente_id
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__paciente_id
+msgid "Patient"
+msgstr "Paciente"
+
+#. module: clinica_dental
+#. odoo-python
+#: code:addons/clinica_dental/models/clinica_cita.py:0
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__alergias_paciente
+msgid "Patient Allergies"
+msgstr "Alergias del Paciente"
+
+#. module: clinica_dental
+#: model:ir.ui.menu,name:clinica_dental.menu_clinica_documentos_pendientes
+msgid "Pendientes de Revisión"
+msgstr "Pendientes de Revisión"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_documento_medico__state__pendiente_revision
+msgid "Pending Review"
+msgstr "Pendiente de Revisión"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_documento_medico__tipo_documento__radiografia_periapical
+msgid "Periapical X-Ray"
+msgstr "Radiografía Periapical"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_odontograma_form
+msgid "Piezas Dentales"
+msgstr "Piezas Dentales"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_tratamiento__state__planificado
+msgid "Planned"
+msgstr "Planificado"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_documento_medico__tipo_documento__receta
+msgid "Prescription"
+msgstr "Receta"
+
+#. module: clinica_dental
+#: model:ir.ui.menu,name:clinica_dental.menu_clinica_presupuestos
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_paciente_form
+msgid "Presupuestos"
+msgstr "Presupuestos"
+
+#. module: clinica_dental
+#: model:ir.actions.act_window,name:clinica_dental.action_clinica_presupuesto
+msgid "Presupuestos Dentales"
+msgstr "Presupuestos Dentales"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__sale_order__tipo_presupuesto__preventivo
+msgid "Preventive"
+msgstr "Preventivo"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__producto_id
+msgid "Product/Service"
+msgstr "Producto/Servicio"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_cita__tipo_cita__protesis
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_tratamiento__tipo_tratamiento__protesis
+msgid "Prosthetics"
+msgstr "Prótesis"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__cantidad
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: clinica_dental
+#: model:res.groups,name:clinica_dental.group_radiologo
+msgid "Radiologist / Assistant"
+msgstr "Radiólogo / Asistente"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__motivo
+msgid "Reason"
+msgstr "Motivo"
+
+#. module: clinica_dental
+#: model:res.groups,name:clinica_dental.group_recepcionista
+msgid "Receptionist"
+msgstr "Recepcionista"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_odontograma_form
+msgid "Regresar a Borrador"
+msgstr "Regresar a Borrador"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__cita_id
+msgid "Related Appointment"
+msgstr "Cita Relacionada"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__tratamiento_id
+msgid "Related Treatment"
+msgstr "Tratamiento Relacionado"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__activity_user_id
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__activity_user_id
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__activity_user_id
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__activity_user_id
+msgid "Responsible User"
+msgstr "Usuario Responsable"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_documento_medico__state__revisado
+msgid "Reviewed"
+msgstr "Revisado"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_cita__tipo_cita__endodoncia
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_odontograma_linea__estado__endodoncia
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_tratamiento__tipo_tratamiento__endodoncia
+msgid "Root Canal"
+msgstr "Endodoncia"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__message_has_sms_error
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__message_has_sms_error
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__message_has_sms_error
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Error de entrega SMS"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__sale_order_id
+msgid "Sale Order"
+msgstr "Orden de Venta"
+
+#. module: clinica_dental
+#: model:ir.model,name:clinica_dental.model_sale_order
+msgid "Sales Order"
+msgstr "Orden de Venta"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_cita__state__agendada
+msgid "Scheduled"
+msgstr "Agendada"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__fumador
+#: model:ir.model.fields,field_description:clinica_dental.field_res_users__fumador
+msgid "Smoker"
+msgstr "Fumador"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__fecha_inicio
+msgid "Start Date"
+msgstr "Fecha de Inicio"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__state
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__state
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__state
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__state
+msgid "Status"
+msgstr "Estado"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__subtotal
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma_linea__superficie
+msgid "Surface"
+msgstr "Superficie"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__enfermedades_sistemicas
+#: model:ir.model.fields,field_description:clinica_dental.field_res_users__enfermedades_sistemicas
+msgid "Systemic Diseases"
+msgstr "Enfermedades Sistémicas"
+
+#. module: clinica_dental
+#. odoo-python
+#: code:addons/clinica_dental/models/clinica_cita.py:0
+msgid "The dentist %s already has an appointment in this time slot."
+msgstr "El dentista %s ya tiene una cita en este horario."
+
+#. module: clinica_dental
+#: model:ir.ui.menu,name:clinica_dental.menu_clinica_documentos_todos
+msgid "Todos los Documentos"
+msgstr "Todos los Documentos"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__pieza_dental
+msgid "Tooth"
+msgstr "Pieza Dental"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma_linea__numero_pieza
+msgid "Tooth Number"
+msgstr "Número de Pieza"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_tratamiento_form
+msgid "Tratamiento Dental"
+msgstr "Tratamiento Dental"
+
+#. module: clinica_dental
+#: model:ir.actions.act_window,name:clinica_dental.action_clinica_tratamiento
+#: model:ir.ui.menu,name:clinica_dental.menu_clinica_tratamientos
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_cita_form
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_paciente_form
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_tratamiento_list
+msgid "Tratamientos"
+msgstr "Tratamientos"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__tipo_tratamiento
+msgid "Treatment Type"
+msgstr "Tipo de Tratamiento"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__tratamiento_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_res_partner__tratamiento_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_res_users__tratamiento_ids
+msgid "Treatments"
+msgstr "Tratamientos"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__precio_unitario
+msgid "Unit Price"
+msgstr "Precio Unitario"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__subido_por
+msgid "Uploaded By"
+msgstr "Subido Por"
+
+#. module: clinica_dental
+#: model:ir.ui.menu,name:clinica_dental.menu_clinica_config_usuarios
+msgid "Usuarios y Grupos"
+msgstr "Usuarios y Grupos"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_odontograma_linea__superficie__vestibular
+msgid "Vestibular"
+msgstr "Vestibular"
+
+#. module: clinica_dental
+#: model_terms:ir.ui.view,arch_db:clinica_dental.view_clinica_cita_form
+msgid "Vínculos"
+msgstr "Vínculos"
+
+#. module: clinica_dental
+#. odoo-python
+#: code:addons/clinica_dental/models/clinica_cita.py:0
+msgid ""
+"Warning: This patient has registered allergies:\n"
+"%s"
+msgstr ""
+"Advertencia: Este paciente tiene alergias registradas:\n"
+"%s"
+
+#. module: clinica_dental
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_cita__website_message_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_documento_medico__website_message_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_odontograma__website_message_ids
+#: model:ir.model.fields,field_description:clinica_dental.field_clinica_tratamiento__website_message_ids
+msgid "Website Messages"
+msgstr "Mensajes del Sitio Web"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_tratamiento__tipo_tratamiento__blanqueamiento
+msgid "Whitening"
+msgstr "Blanqueamiento"
+
+#. module: clinica_dental
+#: model:ir.model.fields.selection,name:clinica_dental.selection__clinica_tratamiento__tipo_tratamiento__radiografia
+msgid "X-Ray"
+msgstr "Radiografía"
+
+#. module: clinica_dental
+#. odoo-python
+#: code:addons/clinica_dental/models/clinica_documento_medico.py:0
+msgid "You have a new <b>%s</b> from patient <b>%s</b> pending review."
+msgstr "Tienes una nueva <b>%s</b> del paciente <b>%s</b> pendiente de revisión."
