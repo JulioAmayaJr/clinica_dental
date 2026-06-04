@@ -11,9 +11,9 @@
                     <header>
                         <button name="action_confirmar" string="Confirmar" type="object"
                                 class="btn-primary"
-                                attrs="{'invisible': [('state', '!=', 'borrador')]}"/>
+                                invisible="state != 'borrador'"/>
                         <button name="action_borrador" string="Regresar a Borrador" type="object"
-                                attrs="{'invisible': [('state', '!=', 'confirmado')]}"/>
+                                invisible="state != 'confirmado'"/>
                         <field name="state" widget="statusbar"
                                statusbar_visible="borrador,confirmado"/>
                     </header>
@@ -36,7 +36,8 @@
                                 </field>
                             </page>
                             <page string="Notas Generales">
-                                <field name="notas_generales" placeholder="Observaciones generales del odontograma..."/>
+                                <field name="notas_generales"
+                                       placeholder="Observaciones generales del odontograma..."/>
                             </page>
                         </notebook>
                     </sheet>

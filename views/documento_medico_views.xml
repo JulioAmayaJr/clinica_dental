@@ -11,10 +11,10 @@
                     <header>
                         <button name="action_marcar_revisado" string="Marcar como Revisado"
                                 type="object" class="btn-success"
-                                attrs="{'invisible': [('state', '!=', 'pendiente_revision')]}"
+                                invisible="state != 'pendiente_revision'"
                                 groups="clinica_dental.group_dentista,clinica_dental.group_admin"/>
                         <button name="action_archivar" string="Archivar" type="object"
-                                attrs="{'invisible': [('state', '!=', 'revisado')]}"
+                                invisible="state != 'revisado'"
                                 groups="clinica_dental.group_dentista,clinica_dental.group_admin"/>
                         <field name="state" widget="statusbar"
                                statusbar_visible="pendiente_revision,revisado,archivado"/>
@@ -57,10 +57,12 @@
                                        placeholder="Notas sobre el documento o imagen..."/>
                             </page>
                             <page string="Notas del Dentista">
+                                <!-- Editable for dentist/admin -->
                                 <field name="notas_dentista"
                                        placeholder="El dentista agregará sus observaciones aquí..."
-                                       attrs="{'readonly': [('state', 'not in', ('pendiente_revision','revisado'))]}"
+                                       readonly="state not in ('pendiente_revision','revisado')"
                                        groups="clinica_dental.group_dentista,clinica_dental.group_admin"/>
+                                <!-- Read-only for receptionist/radiologist -->
                                 <field name="notas_dentista" readonly="1"
                                        groups="clinica_dental.group_recepcionista,clinica_dental.group_radiologo"/>
                             </page>
@@ -108,24 +110,20 @@
                     <field name="state"/>
                     <field name="imagen_principal"/>
                     <templates>
-                        <t t-name="kanban-box">
-                            <div class="oe_kanban_global_click">
-                                <div t-if="record.imagen_principal.value"
-                                     class="o_kanban_image text-center mb-2">
-                                    <img t-att-src="'data:image/png;base64,' + record.imagen_principal.value"
-                                         style="max-height:120px;max-width:180px;object-fit:cover;"/>
-                                </div>
-                                <div class="oe_kanban_details">
-                                    <strong><field name="nombre"/></strong>
-                                    <div class="text-muted"><field name="tipo_documento"/></div>
-                                    <div><field name="paciente_id"/></div>
-                                    <div><field name="fecha"/></div>
-                                    <div class="mt-1">
-                                        <span t-attf-class="badge #{record.state.raw_value == 'pendiente_revision' and 'bg-warning text-dark' or record.state.raw_value == 'revisado' and 'bg-success' or 'bg-secondary'}">
-                                            <field name="state"/>
-                                        </span>
-                                    </div>
-                                </div>
+                        <t t-name="card">
+                            <div t-if="record.imagen_principal.value"
+                                 class="text-center mb-2">
+                                <img t-att-src="'data:image/png;base64,' + record.imagen_principal.value"
+                                     style="max-height:120px;max-width:180px;object-fit:cover;"/>
+                            </div>
+                            <strong><field name="nombre"/></strong>
+                            <div class="text-muted"><field name="tipo_documento"/></div>
+                            <div><field name="paciente_id"/></div>
+                            <div><field name="fecha"/></div>
+                            <div class="mt-1">
+                                <span t-attf-class="badge #{record.state.raw_value == 'pendiente_revision' and 'bg-warning text-dark' or record.state.raw_value == 'revisado' and 'bg-success' or 'bg-secondary'}">
+                                    <field name="state"/>
+                                </span>
                             </div>
                         </t>
                     </templates>

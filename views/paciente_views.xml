@@ -2,29 +2,43 @@
 <odoo>
     <data>
 
-        <!-- Extend res.partner form to add patient tabs -->
+        <!-- Extend base.view_partner_form (Odoo 19 structure verified) -->
+        <!-- Anchors used:
+             - //div[@name='button_box']   → smart button "Nueva Cita"
+             - //field[@name='vat']        → inject es_paciente toggle
+             - //page[@name='sales_purchases'] → insert clinical tabs before it
+        -->
         <record id="view_clinica_paciente_form" model="ir.ui.view">
             <field name="name">res.partner.clinica.paciente.form</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//sheet" position="before">
-                    <header attrs="{'invisible': [('es_paciente', '=', False)]}">
-                        <button name="action_open_nueva_cita" type="object"
-                                string="Nueva Cita" class="btn-primary"
-                                attrs="{'invisible': [('es_paciente', '=', False)]}"/>
-                    </header>
+
+                <!-- Smart button: Nueva Cita (visible only for patients) -->
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_open_nueva_cita" type="object"
+                            class="oe_stat_button" icon="fa-calendar-plus-o"
+                            invisible="not es_paciente">
+                        <div class="o_stat_info">
+                            <span class="o_stat_text">Nueva Cita</span>
+                        </div>
+                    </button>
                 </xpath>
-                <xpath expr="//div[@class='oe_title']" position="before">
-                    <field name="es_paciente" invisible="1"/>
+
+                <!-- Inject es_paciente field after vat (right group, safe anchor) -->
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="es_paciente" string="Es Paciente" widget="boolean_toggle"/>
                 </xpath>
+
+                <!-- Clinical tabs — inserted before sales_purchases tab -->
                 <xpath expr="//page[@name='sales_purchases']" position="before">
+
                     <page string="Información General" name="clinica_general"
-                          attrs="{'invisible': [('es_paciente', '=', False)]}">
+                          invisible="not es_paciente">
                         <group>
                             <group string="Datos Personales">
                                 <field name="fecha_nacimiento"/>
-                                <field name="edad"/>
+                                <field name="edad" readonly="1"/>
                                 <field name="genero"/>
                                 <field name="grupo_sanguineo"/>
                             </group>
@@ -34,8 +48,9 @@
                             </group>
                         </group>
                     </page>
+
                     <page string="Historia Clínica" name="clinica_historia"
-                          attrs="{'invisible': [('es_paciente', '=', False)]}">
+                          invisible="not es_paciente">
                         <group>
                             <group string="Antecedentes Médicos">
                                 <field name="alergias"/>
@@ -44,13 +59,13 @@
                                 <field name="fumador"/>
                             </group>
                         </group>
-                        <group>
-                            <field name="historia_clinica" nolabel="1"
-                                   placeholder="Historia clínica detallada..."/>
-                        </group>
+                        <separator string="Historia Clínica Detallada"/>
+                        <field name="historia_clinica" nolabel="1"
+                               placeholder="Historia clínica detallada..."/>
                     </page>
+
                     <page string="Citas" name="clinica_citas"
-                          attrs="{'invisible': [('es_paciente', '=', False)]}">
+                          invisible="not es_paciente">
                         <field name="cita_ids" readonly="1">
                             <list>
                                 <field name="fecha_inicio"/>
@@ -60,13 +75,14 @@
                                 <field name="state" widget="badge"
                                        decoration-success="state == 'completada'"
                                        decoration-warning="state == 'agendada'"
-                                       decoration-info="state == 'confirmada'"
+                                       decoration-info="state in ('confirmada','en_proceso')"
                                        decoration-danger="state in ('cancelada','no_asistio')"/>
                             </list>
                         </field>
                     </page>
+
                     <page string="Tratamientos" name="clinica_tratamientos"
-                          attrs="{'invisible': [('es_paciente', '=', False)]}">
+                          invisible="not es_paciente">
                         <field name="tratamiento_ids" readonly="1">
                             <list>
                                 <field name="fecha"/>
@@ -82,8 +98,9 @@
                             </list>
                         </field>
                     </page>
+
                     <page string="Odontogramas" name="clinica_odontogramas"
-                          attrs="{'invisible': [('es_paciente', '=', False)]}">
+                          invisible="not es_paciente">
                         <field name="odontograma_ids" readonly="1">
                             <list>
                                 <field name="fecha"/>
@@ -94,10 +111,11 @@
                             </list>
                         </field>
                     </page>
+
                     <page string="Documentos e Imágenes" name="clinica_documentos"
-                          attrs="{'invisible': [('es_paciente', '=', False)]}">
+                          invisible="not es_paciente">
                         <field name="documento_medico_ids">
-                            <kanban class="o_kanban_mobile">
+                            <kanban>
                                 <field name="nombre"/>
                                 <field name="tipo_documento"/>
                                 <field name="fecha"/>
@@ -106,30 +124,28 @@
                                 <field name="state"/>
                                 <field name="imagen_principal"/>
                                 <templates>
-                                    <t t-name="kanban-box">
-                                        <div class="oe_kanban_global_click">
-                                            <div class="o_kanban_image" t-if="record.imagen_principal.value">
-                                                <img t-att-src="'data:image/png;base64,' + record.imagen_principal.value"
-                                                     style="max-height:100px;max-width:150px;"/>
-                                            </div>
-                                            <div class="oe_kanban_details">
-                                                <strong><field name="nombre"/></strong>
-                                                <div><field name="tipo_documento"/></div>
-                                                <div><field name="fecha"/></div>
-                                                <div>
-                                                    <span t-attf-class="badge #{record.state.raw_value == 'pendiente_revision' and 'bg-warning' or record.state.raw_value == 'revisado' and 'bg-success' or 'bg-secondary'}">
-                                                        <field name="state"/>
-                                                    </span>
-                                                </div>
-                                            </div>
+                                    <t t-name="card">
+                                        <div t-if="record.imagen_principal.value"
+                                             class="text-center mb-2">
+                                            <img t-att-src="'data:image/png;base64,' + record.imagen_principal.value"
+                                                 style="max-height:90px;max-width:140px;object-fit:cover;"/>
+                                        </div>
+                                        <strong><field name="nombre"/></strong>
+                                        <div class="text-muted"><field name="tipo_documento"/></div>
+                                        <div><field name="fecha"/></div>
+                                        <div>
+                                            <span t-attf-class="badge #{record.state.raw_value == 'pendiente_revision' and 'bg-warning text-dark' or record.state.raw_value == 'revisado' and 'bg-success' or 'bg-secondary'}">
+                                                <field name="state"/>
+                                            </span>
                                         </div>
                                     </t>
                                 </templates>
                             </kanban>
                         </field>
                     </page>
+
                     <page string="Presupuestos" name="clinica_presupuestos"
-                          attrs="{'invisible': [('es_paciente', '=', False)]}">
+                          invisible="not es_paciente">
                         <field name="presupuesto_ids" readonly="1">
                             <list>
                                 <field name="name"/>
@@ -143,11 +159,13 @@
                             </list>
                         </field>
                     </page>
+
                 </xpath>
+
             </field>
         </record>
 
-        <!-- Pacientes list view -->
+        <!-- Standalone list view for the Patients menu -->
         <record id="view_clinica_paciente_list" model="ir.ui.view">
             <field name="name">clinica.paciente.list</field>
             <field name="model">res.partner</field>
@@ -163,7 +181,9 @@
             </field>
         </record>
 
-        <!-- Action for patients -->
+        <!-- Action: opens res.partner filtered to patients.
+             Form view is NOT specified here — the inherited view
+             (view_clinica_paciente_form) is applied automatically by Odoo. -->
         <record id="action_clinica_paciente" model="ir.actions.act_window">
             <field name="name">Pacientes</field>
             <field name="res_model">res.partner</field>
@@ -172,7 +192,6 @@
             <field name="context">{'default_es_paciente': True}</field>
             <field name="view_ids" eval="[(5, 0, 0),
                 (0, 0, {'view_mode': 'list', 'view_id': ref('view_clinica_paciente_list')}),
-                (0, 0, {'view_mode': 'form', 'view_id': ref('view_clinica_paciente_form')}),
             ]"/>
         </record>
 

@@ -11,21 +11,21 @@
                     <header>
                         <button name="action_confirmar" string="Confirmar" type="object"
                                 class="btn-primary"
-                                attrs="{'invisible': [('state', '!=', 'agendada')]}"/>
+                                invisible="state != 'agendada'"/>
                         <button name="action_en_proceso" string="En Proceso" type="object"
                                 class="btn-primary"
-                                attrs="{'invisible': [('state', '!=', 'confirmada')]}"/>
+                                invisible="state != 'confirmada'"/>
                         <button name="action_completar" string="Completar" type="object"
                                 class="btn-success"
-                                attrs="{'invisible': [('state', '!=', 'en_proceso')]}"/>
+                                invisible="state != 'en_proceso'"/>
                         <button name="action_cancelar" string="Cancelar" type="object"
                                 class="btn-danger"
-                                attrs="{'invisible': [('state', 'in', ('completada','cancelada','no_asistio'))]}"/>
+                                invisible="state in ('completada','cancelada','no_asistio')"/>
                         <button name="action_no_asistio" string="No Asistió" type="object"
-                                attrs="{'invisible': [('state', 'in', ('completada','cancelada','no_asistio'))]}"/>
+                                invisible="state in ('completada','cancelada','no_asistio')"/>
                         <button name="action_generar_venta" string="Generar Venta" type="object"
                                 class="btn-secondary"
-                                attrs="{'invisible': [('state', '!=', 'completada')]}"/>
+                                invisible="state != 'completada'"/>
                         <field name="state" widget="statusbar"
                                statusbar_visible="agendada,confirmada,en_proceso,completada"/>
                     </header>
@@ -48,12 +48,11 @@
                                 <field name="duracion" readonly="1"/>
                             </group>
                         </group>
-                        <group attrs="{'invisible': [('alergias_paciente', '=', False)]}">
-                            <div class="alert alert-warning" role="alert">
-                                <strong>⚠ Alergias del paciente:</strong>
-                                <field name="alergias_paciente" readonly="1" nolabel="1"/>
-                            </div>
-                        </group>
+                        <div class="alert alert-warning" role="alert"
+                             invisible="not alergias_paciente">
+                            <strong>⚠ Alergias del paciente:</strong>
+                            <field name="alergias_paciente" readonly="1" nolabel="1"/>
+                        </div>
                         <notebook>
                             <page string="Tratamientos">
                                 <field name="tratamiento_ids">
@@ -89,7 +88,8 @@
             <field name="name">clinica.cita.list</field>
             <field name="model">clinica.cita</field>
             <field name="arch" type="xml">
-                <list string="Citas" decoration-success="state == 'completada'"
+                <list string="Citas"
+                      decoration-success="state == 'completada'"
                       decoration-warning="state == 'agendada'"
                       decoration-info="state == 'confirmada'"
                       decoration-danger="state in ('cancelada','no_asistio')">
@@ -122,17 +122,15 @@
                     <field name="state"/>
                     <field name="color"/>
                     <templates>
-                        <t t-name="kanban-box">
-                            <div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)} oe_kanban_global_click">
-                                <div class="oe_kanban_details">
-                                    <strong class="o_kanban_record_title">
-                                        <field name="paciente_id"/>
-                                    </strong>
-                                    <div class="o_kanban_record_subtitle">
-                                        <field name="tipo_cita"/> — <field name="dentista_id"/>
-                                    </div>
-                                    <div><field name="fecha_inicio" widget="datetime"/></div>
+                        <t t-name="card">
+                            <div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)}">
+                                <strong class="o_kanban_record_title">
+                                    <field name="paciente_id"/>
+                                </strong>
+                                <div class="o_kanban_record_subtitle">
+                                    <field name="tipo_cita"/> — <field name="dentista_id"/>
                                 </div>
+                                <div><field name="fecha_inicio" widget="datetime"/></div>
                             </div>
                         </t>
                     </templates>

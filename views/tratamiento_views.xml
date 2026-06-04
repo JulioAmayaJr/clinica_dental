@@ -11,13 +11,13 @@
                     <header>
                         <button name="action_iniciar" string="Iniciar" type="object"
                                 class="btn-primary"
-                                attrs="{'invisible': [('state', '!=', 'planificado')]}"/>
+                                invisible="state != 'planificado'"/>
                         <button name="action_completar" string="Completar" type="object"
                                 class="btn-success"
-                                attrs="{'invisible': [('state', '!=', 'en_proceso')]}"/>
+                                invisible="state != 'en_proceso'"/>
                         <button name="action_cancelar" string="Cancelar" type="object"
                                 class="btn-danger"
-                                attrs="{'invisible': [('state', 'in', ('completado','cancelado'))]}"/>
+                                invisible="state in ('completado','cancelado')"/>
                         <field name="state" widget="statusbar"
                                statusbar_visible="planificado,en_proceso,completado"/>
                     </header>
@@ -89,16 +89,12 @@
                     <field name="subtotal"/>
                     <field name="state"/>
                     <templates>
-                        <t t-name="kanban-box">
-                            <div class="oe_kanban_global_click">
-                                <div class="oe_kanban_details">
-                                    <strong><field name="paciente_id"/></strong>
-                                    <div><field name="tipo_tratamiento"/></div>
-                                    <div><field name="dentista_id"/></div>
-                                    <div class="text-end">
-                                        <field name="subtotal" widget="monetary"/>
-                                    </div>
-                                </div>
+                        <t t-name="card">
+                            <strong><field name="paciente_id"/></strong>
+                            <div><field name="tipo_tratamiento"/></div>
+                            <div><field name="dentista_id"/></div>
+                            <div class="text-end">
+                                <field name="subtotal" widget="monetary"/>
                             </div>
                         </t>
                     </templates>
