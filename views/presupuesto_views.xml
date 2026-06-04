@@ -2,10 +2,9 @@
 <odoo>
     <data>
 
-        <!-- Extend sale.order form to show dental budget fields.
-             Anchors verified against Odoo 19 sale.order.form:
-             - //field[@name='partner_id']  → safe field anchor (line 432)
-             - //page[@name='other_information'] → real page name in Odoo 19 sale form
+        <!-- Extend sale.order form — Odoo 19 anchors verified:
+             //field[@name='validity_date']  → unique field in header group of sale form
+             //page[@name='other_information'] → real page name confirmed in container
         -->
         <record id="view_sale_order_clinica_presupuesto_form" model="ir.ui.view">
             <field name="name">sale.order.clinica.presupuesto.form</field>
@@ -13,21 +12,14 @@
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
 
-                <!-- Badge "Presupuesto Dental" — inject before partner_id field -->
-                <xpath expr="//field[@name='partner_id']" position="before">
-                    <h2 class="text-muted" invisible="not es_presupuesto_dental">
-                        Presupuesto Dental
-                    </h2>
+                <!-- Inject hidden flag + tipo_presupuesto after validity_date (unique anchor) -->
+                <xpath expr="//field[@name='validity_date']" position="after">
                     <field name="es_presupuesto_dental" invisible="1"/>
-                </xpath>
-
-                <!-- tipo_presupuesto after partner_id -->
-                <xpath expr="//field[@name='partner_id']" position="after">
                     <field name="tipo_presupuesto"
                            invisible="not es_presupuesto_dental"/>
                 </xpath>
 
-                <!-- Notas clínicas tab — after other_information page (real Odoo 19 name) -->
+                <!-- Notas clínicas tab after other_information (confirmed name in Odoo 19) -->
                 <xpath expr="//page[@name='other_information']" position="after">
                     <page string="Notas Clínicas" name="notas_clinicas_dental"
                           invisible="not es_presupuesto_dental">
@@ -39,7 +31,7 @@
             </field>
         </record>
 
-        <!-- Extend sale order list to show tipo_presupuesto for dental budgets -->
+        <!-- Extend sale order list view (view_quotation_tree_with_onboarding confirmed exists) -->
         <record id="view_sale_order_clinica_presupuesto_list" model="ir.ui.view">
             <field name="name">sale.order.clinica.presupuesto.list</field>
             <field name="model">sale.order</field>
@@ -52,16 +44,13 @@
             </field>
         </record>
 
-        <!-- Action: Dental Budgets — filters sale.order -->
+        <!-- Action: Dental Budgets — filters sale.order by es_presupuesto_dental -->
         <record id="action_clinica_presupuesto" model="ir.actions.act_window">
             <field name="name">Presupuestos Dentales</field>
             <field name="res_model">sale.order</field>
             <field name="view_mode">list,form</field>
             <field name="domain">[('es_presupuesto_dental', '=', True)]</field>
-            <field name="context">{
-                'default_es_presupuesto_dental': True,
-                'search_default_es_presupuesto_dental': 1
-            }</field>
+            <field name="context">{'default_es_presupuesto_dental': True}</field>
         </record>
 
     </data>

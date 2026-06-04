@@ -109,12 +109,12 @@
             </field>
         </record>
 
-        <!-- Cita Kanban -->
+        <!-- Cita Kanban — Odoo 19: color on <kanban> element, no kanban_getcolor in template -->
         <record id="view_clinica_cita_kanban" model="ir.ui.view">
             <field name="name">clinica.cita.kanban</field>
             <field name="model">clinica.cita</field>
             <field name="arch" type="xml">
-                <kanban default_group_by="state" class="o_kanban_small_column">
+                <kanban default_group_by="state" color="color">
                     <field name="paciente_id"/>
                     <field name="dentista_id"/>
                     <field name="fecha_inicio"/>
@@ -123,14 +123,17 @@
                     <field name="color"/>
                     <templates>
                         <t t-name="card">
-                            <div t-attf-class="oe_kanban_color_#{kanban_getcolor(record.color.raw_value)}">
-                                <strong class="o_kanban_record_title">
-                                    <field name="paciente_id"/>
-                                </strong>
-                                <div class="o_kanban_record_subtitle">
-                                    <field name="tipo_cita"/> — <field name="dentista_id"/>
-                                </div>
-                                <div><field name="fecha_inicio" widget="datetime"/></div>
+                            <div class="fw-bold">
+                                <field name="paciente_id"/>
+                            </div>
+                            <div class="text-muted">
+                                <field name="tipo_cita"/> — <field name="dentista_id"/>
+                            </div>
+                            <div>
+                                <field name="fecha_inicio" widget="datetime"/>
+                            </div>
+                            <div>
+                                <field name="state" widget="badge"/>
                             </div>
                         </t>
                     </templates>
@@ -138,13 +141,14 @@
             </field>
         </record>
 
-        <!-- Cita Calendar -->
+        <!-- Cita Calendar — Odoo 19 RNG: valid attrs are date_start, date_stop, color, mode,
+             quick_create, create, delete, scales, event_open_popup, etc. NO quick_add. -->
         <record id="view_clinica_cita_calendar" model="ir.ui.view">
             <field name="name">clinica.cita.calendar</field>
             <field name="model">clinica.cita</field>
             <field name="arch" type="xml">
                 <calendar string="Citas" date_start="fecha_inicio" date_stop="fecha_fin"
-                          color="color" mode="week" quick_add="False">
+                          color="color" mode="week">
                     <field name="paciente_id"/>
                     <field name="dentista_id"/>
                     <field name="tipo_cita"/>

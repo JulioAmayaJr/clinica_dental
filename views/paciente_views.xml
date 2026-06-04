@@ -128,6 +128,7 @@
                                         <div t-if="record.imagen_principal.value"
                                              class="text-center mb-2">
                                             <img t-att-src="'data:image/png;base64,' + record.imagen_principal.value"
+                                                 alt="Documento médico"
                                                  style="max-height:90px;max-width:140px;object-fit:cover;"/>
                                         </div>
                                         <strong><field name="nombre"/></strong>

@@ -1,9 +1,9 @@
-# Spanish translation for clinica_dental
-# Copyright (C) 2024
+# Spanish translations for clinica_dental
+# Copyright (C) 2024 Clínica Dental Dev
 # This file is distributed under the same license as the clinica_dental package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 19.0\n"
+"Project-Id-Version: Odoo Server 19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-01 00:00+0000\n"
 "PO-Revision-Date: 2024-01-01 00:00+0000\n"
@@ -15,380 +15,362 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#. module: clinica_dental
 msgid "Is Patient"
 msgstr "Es Paciente"
 
+#. module: clinica_dental
 msgid "Clinical History"
 msgstr "Historia Clínica"
 
+#. module: clinica_dental
 msgid "Date of Birth"
 msgstr "Fecha de Nacimiento"
 
+#. module: clinica_dental
 msgid "Age"
 msgstr "Edad"
 
+#. module: clinica_dental
 msgid "Gender"
 msgstr "Género"
 
+#. module: clinica_dental
 msgid "Male"
 msgstr "Masculino"
 
+#. module: clinica_dental
 msgid "Female"
 msgstr "Femenino"
 
-msgid "Other"
-msgstr "Otro"
-
+#. module: clinica_dental
 msgid "Blood Type"
 msgstr "Grupo Sanguíneo"
 
+#. module: clinica_dental
 msgid "Allergies"
 msgstr "Alergias"
 
+#. module: clinica_dental
 msgid "Systemic Diseases"
 msgstr "Enfermedades Sistémicas"
 
+#. module: clinica_dental
 msgid "Current Medications"
 msgstr "Medicamentos Actuales"
 
+#. module: clinica_dental
 msgid "Smoker"
 msgstr "Fumador"
 
+#. module: clinica_dental
 msgid "Emergency Contact"
 msgstr "Contacto de Emergencia"
 
+#. module: clinica_dental
 msgid "Emergency Phone"
 msgstr "Teléfono de Emergencia"
 
-msgid "Appointments"
-msgstr "Citas"
-
-msgid "Treatments"
-msgstr "Tratamientos"
-
-msgid "Odontograms"
-msgstr "Odontogramas"
-
-msgid "Medical Documents"
-msgstr "Documentos Médicos"
-
-msgid "Budgets"
-msgstr "Presupuestos"
-
+#. module: clinica_dental
 msgid "Dental Appointment"
 msgstr "Cita Dental"
 
+#. module: clinica_dental
 msgid "Patient"
 msgstr "Paciente"
 
+#. module: clinica_dental
 msgid "Dentist"
 msgstr "Dentista"
 
+#. module: clinica_dental
 msgid "Start Date"
 msgstr "Fecha de Inicio"
 
+#. module: clinica_dental
 msgid "End Date"
 msgstr "Fecha de Fin"
 
+#. module: clinica_dental
 msgid "Duration (hours)"
 msgstr "Duración (horas)"
 
+#. module: clinica_dental
 msgid "Reason"
 msgstr "Motivo"
 
+#. module: clinica_dental
 msgid "Appointment Type"
 msgstr "Tipo de Cita"
 
+#. module: clinica_dental
 msgid "Consultation"
 msgstr "Consulta"
 
+#. module: clinica_dental
 msgid "Cleaning"
 msgstr "Limpieza"
 
+#. module: clinica_dental
 msgid "Extraction"
 msgstr "Extracción"
 
+#. module: clinica_dental
 msgid "Orthodontics"
 msgstr "Ortodoncia"
 
+#. module: clinica_dental
 msgid "Root Canal"
 msgstr "Endodoncia"
 
+#. module: clinica_dental
 msgid "Prosthetics"
 msgstr "Prótesis"
 
+#. module: clinica_dental
 msgid "Aesthetics"
 msgstr "Estética"
 
+#. module: clinica_dental
 msgid "Emergency"
 msgstr "Urgencia"
 
+#. module: clinica_dental
 msgid "Follow-up"
 msgstr "Control"
 
-msgid "Status"
-msgstr "Estado"
-
+#. module: clinica_dental
 msgid "Scheduled"
 msgstr "Agendada"
 
+#. module: clinica_dental
 msgid "Confirmed"
 msgstr "Confirmada"
 
+#. module: clinica_dental
 msgid "In Progress"
 msgstr "En Proceso"
 
+#. module: clinica_dental
 msgid "Completed"
 msgstr "Completada"
 
+#. module: clinica_dental
 msgid "Cancelled"
 msgstr "Cancelada"
 
+#. module: clinica_dental
 msgid "No Show"
 msgstr "No Asistió"
 
-msgid "Notes"
-msgstr "Notas"
-
-msgid "Calendar Event"
-msgstr "Evento de Calendario"
-
-msgid "Sale Order"
-msgstr "Orden de Venta"
-
-msgid "Color"
-msgstr "Color"
-
-msgid "Patient Allergies"
-msgstr "Alergias del Paciente"
-
+#. module: clinica_dental
 msgid "Dental Odontogram"
 msgstr "Odontograma Dental"
 
-msgid "Date"
-msgstr "Fecha"
-
+#. module: clinica_dental
 msgid "General Notes"
 msgstr "Notas Generales"
 
-msgid "Lines"
-msgstr "Líneas"
-
+#. module: clinica_dental
 msgid "Draft"
 msgstr "Borrador"
 
-msgid "Confirmed"
-msgstr "Confirmado"
-
-msgid "Odontogram Line"
-msgstr "Línea de Odontograma"
-
-msgid "Odontogram"
-msgstr "Odontograma"
-
+#. module: clinica_dental
 msgid "Tooth Number"
 msgstr "Número de Pieza"
 
-msgid "Condition"
-msgstr "Estado"
-
+#. module: clinica_dental
 msgid "Healthy"
 msgstr "Sano"
 
+#. module: clinica_dental
 msgid "Cavity"
 msgstr "Caries"
 
+#. module: clinica_dental
 msgid "Fracture"
 msgstr "Fractura"
 
+#. module: clinica_dental
 msgid "Missing"
 msgstr "Ausente"
 
+#. module: clinica_dental
 msgid "Crown"
 msgstr "Corona"
 
+#. module: clinica_dental
 msgid "Implant"
 msgstr "Implante"
 
+#. module: clinica_dental
 msgid "Extraction Indicated"
 msgstr "Extracción Indicada"
 
+#. module: clinica_dental
 msgid "Filling"
 msgstr "Obturación"
 
-msgid "Surface"
-msgstr "Superficie"
-
+#. module: clinica_dental
 msgid "Occlusal"
 msgstr "Oclusal"
 
+#. module: clinica_dental
 msgid "Vestibular"
 msgstr "Vestibular"
 
+#. module: clinica_dental
 msgid "Lingual"
 msgstr "Lingual"
 
+#. module: clinica_dental
 msgid "Mesial"
 msgstr "Mesial"
 
+#. module: clinica_dental
 msgid "Distal"
 msgstr "Distal"
 
+#. module: clinica_dental
 msgid "Cervical"
 msgstr "Cervical"
 
+#. module: clinica_dental
 msgid "Dental Treatment"
 msgstr "Tratamiento Dental"
 
-msgid "Appointment"
-msgstr "Cita"
-
-msgid "Tooth"
-msgstr "Pieza Dental"
-
+#. module: clinica_dental
 msgid "Treatment Type"
 msgstr "Tipo de Tratamiento"
 
+#. module: clinica_dental
 msgid "Whitening"
 msgstr "Blanqueamiento"
 
+#. module: clinica_dental
 msgid "X-Ray"
 msgstr "Radiografía"
 
-msgid "Description"
-msgstr "Descripción"
-
-msgid "Product/Service"
-msgstr "Producto/Servicio"
-
-msgid "Quantity"
-msgstr "Cantidad"
-
-msgid "Unit Price"
-msgstr "Precio Unitario"
-
-msgid "Subtotal"
-msgstr "Subtotal"
-
+#. module: clinica_dental
 msgid "Planned"
 msgstr "Planificado"
 
-msgid "Clinical Notes"
-msgstr "Notas Clínicas"
-
+#. module: clinica_dental
 msgid "Medical Document"
 msgstr "Documento Médico"
 
+#. module: clinica_dental
 msgid "Document Name"
 msgstr "Nombre del Documento"
 
+#. module: clinica_dental
 msgid "Document Type"
 msgstr "Tipo de Documento"
 
+#. module: clinica_dental
 msgid "Periapical X-Ray"
 msgstr "Radiografía Periapical"
 
+#. module: clinica_dental
 msgid "Panoramic X-Ray"
 msgstr "Radiografía Panorámica"
 
+#. module: clinica_dental
 msgid "Bitewing X-Ray"
 msgstr "Radiografía Bitewing"
 
+#. module: clinica_dental
 msgid "Cephalometric X-Ray"
 msgstr "Radiografía Cefalométrica"
 
+#. module: clinica_dental
 msgid "Intraoral Photo"
 msgstr "Fotografía Intraoral"
 
+#. module: clinica_dental
 msgid "Extraoral Photo"
 msgstr "Fotografía Extraoral"
 
+#. module: clinica_dental
 msgid "Informed Consent"
 msgstr "Consentimiento Informado"
 
+#. module: clinica_dental
 msgid "Prescription"
 msgstr "Receta"
 
+#. module: clinica_dental
 msgid "Lab Results"
 msgstr "Resultados de Laboratorio"
 
+#. module: clinica_dental
 msgid "Uploaded By"
 msgstr "Subido Por"
 
+#. module: clinica_dental
 msgid "Directed To (Dentist)"
 msgstr "Dirigido A (Dentista)"
 
-msgid "Related Appointment"
-msgstr "Cita Relacionada"
-
-msgid "Related Treatment"
-msgstr "Tratamiento Relacionado"
-
-msgid "Attachments"
-msgstr "Adjuntos"
-
-msgid "Main Image"
-msgstr "Imagen Principal"
-
-msgid "Image Filename"
-msgstr "Nombre del Archivo de Imagen"
-
+#. module: clinica_dental
 msgid "Pending Review"
 msgstr "Pendiente de Revisión"
 
+#. module: clinica_dental
 msgid "Reviewed"
 msgstr "Revisado"
 
+#. module: clinica_dental
 msgid "Archived"
 msgstr "Archivado"
 
+#. module: clinica_dental
 msgid "Confidential"
 msgstr "Confidencial"
 
+#. module: clinica_dental
 msgid "Dentist Notes"
 msgstr "Notas del Dentista"
 
+#. module: clinica_dental
 msgid "Dental Budget"
 msgstr "Presupuesto Dental"
 
+#. module: clinica_dental
 msgid "Budget Type"
 msgstr "Tipo de Presupuesto"
 
+#. module: clinica_dental
 msgid "Preventive"
 msgstr "Preventivo"
 
+#. module: clinica_dental
 msgid "Corrective"
 msgstr "Correctivo"
 
+#. module: clinica_dental
 msgid "Aesthetic"
 msgstr "Estético"
 
+#. module: clinica_dental
 msgid "Orthodontic"
 msgstr "Ortodóntico"
 
+#. module: clinica_dental
 msgid "Receptionist"
 msgstr "Recepcionista"
 
+#. module: clinica_dental
 msgid "Radiologist / Assistant"
 msgstr "Radiólogo / Asistente"
 
+#. module: clinica_dental
 msgid "Clinic Administrator"
 msgstr "Administrador de Clínica"
 
-msgid "You have a new %s from patient %s pending review."
-msgstr "Tienes una nueva %s del paciente %s pendiente de revisión."
+#. module: clinica_dental
+msgid "Is Dental Budget"
+msgstr "Es Presupuesto Dental"
 
-msgid "Document %s has been reviewed by %s."
-msgstr "El documento %s ha sido revisado por %s."
-
-msgid "Warning: This patient has registered allergies:\n%s"
-msgstr "Advertencia: Este paciente tiene alergias registradas:\n%s"
-
-msgid "Patient Allergies"
-msgstr "Alergias del Paciente"
-
-msgid "The dentist %s already has an appointment in this time slot."
-msgstr "El dentista %s ya tiene una cita en este horario."
-
-msgid "Appointment: %s - %s"
-msgstr "Cita: %s - %s"
+#. module: clinica_dental
+msgid "Clinical Notes"
+msgstr "Notas Clínicas"
