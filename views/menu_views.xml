@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Root Menu -->
+        <menuitem id="menu_clinica_dental_root"
+                  name="Clínica Dental"
+                  sequence="50"
+                  web_icon="clinica_dental,static/description/icon.png"/>
+
+        <!-- Pacientes -->
+        <menuitem id="menu_clinica_pacientes"
+                  name="Pacientes"
+                  parent="menu_clinica_dental_root"
+                  action="action_clinica_paciente"
+                  sequence="10"/>
+
+        <!-- Citas -->
+        <menuitem id="menu_clinica_citas"
+                  name="Citas"
+                  parent="menu_clinica_dental_root"
+                  action="action_clinica_cita"
+                  sequence="20"/>
+
+        <!-- Tratamientos -->
+        <menuitem id="menu_clinica_tratamientos"
+                  name="Tratamientos"
+                  parent="menu_clinica_dental_root"
+                  action="action_clinica_tratamiento"
+                  sequence="30"/>
+
+        <!-- Documentos e Imágenes -->
+        <menuitem id="menu_clinica_documentos"
+                  name="Documentos e Imágenes"
+                  parent="menu_clinica_dental_root"
+                  sequence="40"/>
+
+        <menuitem id="menu_clinica_documentos_todos"
+                  name="Todos los Documentos"
+                  parent="menu_clinica_documentos"
+                  action="action_clinica_documento_medico"
+                  sequence="10"/>
+
+        <menuitem id="menu_clinica_documentos_pendientes"
+                  name="Pendientes de Revisión"
+                  parent="menu_clinica_documentos"
+                  action="action_clinica_documento_medico_pendientes"
+                  sequence="20"/>
+
+        <!-- Odontogramas -->
+        <menuitem id="menu_clinica_odontogramas"
+                  name="Odontogramas"
+                  parent="menu_clinica_dental_root"
+                  action="action_clinica_odontograma"
+                  sequence="50"/>
+
+        <!-- Presupuestos -->
+        <menuitem id="menu_clinica_presupuestos"
+                  name="Presupuestos"
+                  parent="menu_clinica_dental_root"
+                  action="action_clinica_presupuesto"
+                  sequence="60"/>
+
+        <!-- Configuración -->
+        <menuitem id="menu_clinica_configuracion"
+                  name="Configuración"
+                  parent="menu_clinica_dental_root"
+                  sequence="100"
+                  groups="clinica_dental.group_admin"/>
+
+        <menuitem id="menu_clinica_config_usuarios"
+                  name="Usuarios y Grupos"
+                  parent="menu_clinica_configuracion"
+                  action="base.action_res_users"
+                  sequence="10"
+                  groups="clinica_dental.group_admin"/>
+
+    </data>
+</odoo>

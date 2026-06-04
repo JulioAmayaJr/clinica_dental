@@ -1,0 +1,394 @@
+# Spanish translation for clinica_dental
+# Copyright (C) 2024
+# This file is distributed under the same license as the clinica_dental package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Is Patient"
+msgstr "Es Paciente"
+
+msgid "Clinical History"
+msgstr "Historia Clínica"
+
+msgid "Date of Birth"
+msgstr "Fecha de Nacimiento"
+
+msgid "Age"
+msgstr "Edad"
+
+msgid "Gender"
+msgstr "Género"
+
+msgid "Male"
+msgstr "Masculino"
+
+msgid "Female"
+msgstr "Femenino"
+
+msgid "Other"
+msgstr "Otro"
+
+msgid "Blood Type"
+msgstr "Grupo Sanguíneo"
+
+msgid "Allergies"
+msgstr "Alergias"
+
+msgid "Systemic Diseases"
+msgstr "Enfermedades Sistémicas"
+
+msgid "Current Medications"
+msgstr "Medicamentos Actuales"
+
+msgid "Smoker"
+msgstr "Fumador"
+
+msgid "Emergency Contact"
+msgstr "Contacto de Emergencia"
+
+msgid "Emergency Phone"
+msgstr "Teléfono de Emergencia"
+
+msgid "Appointments"
+msgstr "Citas"
+
+msgid "Treatments"
+msgstr "Tratamientos"
+
+msgid "Odontograms"
+msgstr "Odontogramas"
+
+msgid "Medical Documents"
+msgstr "Documentos Médicos"
+
+msgid "Budgets"
+msgstr "Presupuestos"
+
+msgid "Dental Appointment"
+msgstr "Cita Dental"
+
+msgid "Patient"
+msgstr "Paciente"
+
+msgid "Dentist"
+msgstr "Dentista"
+
+msgid "Start Date"
+msgstr "Fecha de Inicio"
+
+msgid "End Date"
+msgstr "Fecha de Fin"
+
+msgid "Duration (hours)"
+msgstr "Duración (horas)"
+
+msgid "Reason"
+msgstr "Motivo"
+
+msgid "Appointment Type"
+msgstr "Tipo de Cita"
+
+msgid "Consultation"
+msgstr "Consulta"
+
+msgid "Cleaning"
+msgstr "Limpieza"
+
+msgid "Extraction"
+msgstr "Extracción"
+
+msgid "Orthodontics"
+msgstr "Ortodoncia"
+
+msgid "Root Canal"
+msgstr "Endodoncia"
+
+msgid "Prosthetics"
+msgstr "Prótesis"
+
+msgid "Aesthetics"
+msgstr "Estética"
+
+msgid "Emergency"
+msgstr "Urgencia"
+
+msgid "Follow-up"
+msgstr "Control"
+
+msgid "Status"
+msgstr "Estado"
+
+msgid "Scheduled"
+msgstr "Agendada"
+
+msgid "Confirmed"
+msgstr "Confirmada"
+
+msgid "In Progress"
+msgstr "En Proceso"
+
+msgid "Completed"
+msgstr "Completada"
+
+msgid "Cancelled"
+msgstr "Cancelada"
+
+msgid "No Show"
+msgstr "No Asistió"
+
+msgid "Notes"
+msgstr "Notas"
+
+msgid "Calendar Event"
+msgstr "Evento de Calendario"
+
+msgid "Sale Order"
+msgstr "Orden de Venta"
+
+msgid "Color"
+msgstr "Color"
+
+msgid "Patient Allergies"
+msgstr "Alergias del Paciente"
+
+msgid "Dental Odontogram"
+msgstr "Odontograma Dental"
+
+msgid "Date"
+msgstr "Fecha"
+
+msgid "General Notes"
+msgstr "Notas Generales"
+
+msgid "Lines"
+msgstr "Líneas"
+
+msgid "Draft"
+msgstr "Borrador"
+
+msgid "Confirmed"
+msgstr "Confirmado"
+
+msgid "Odontogram Line"
+msgstr "Línea de Odontograma"
+
+msgid "Odontogram"
+msgstr "Odontograma"
+
+msgid "Tooth Number"
+msgstr "Número de Pieza"
+
+msgid "Condition"
+msgstr "Estado"
+
+msgid "Healthy"
+msgstr "Sano"
+
+msgid "Cavity"
+msgstr "Caries"
+
+msgid "Fracture"
+msgstr "Fractura"
+
+msgid "Missing"
+msgstr "Ausente"
+
+msgid "Crown"
+msgstr "Corona"
+
+msgid "Implant"
+msgstr "Implante"
+
+msgid "Extraction Indicated"
+msgstr "Extracción Indicada"
+
+msgid "Filling"
+msgstr "Obturación"
+
+msgid "Surface"
+msgstr "Superficie"
+
+msgid "Occlusal"
+msgstr "Oclusal"
+
+msgid "Vestibular"
+msgstr "Vestibular"
+
+msgid "Lingual"
+msgstr "Lingual"
+
+msgid "Mesial"
+msgstr "Mesial"
+
+msgid "Distal"
+msgstr "Distal"
+
+msgid "Cervical"
+msgstr "Cervical"
+
+msgid "Dental Treatment"
+msgstr "Tratamiento Dental"
+
+msgid "Appointment"
+msgstr "Cita"
+
+msgid "Tooth"
+msgstr "Pieza Dental"
+
+msgid "Treatment Type"
+msgstr "Tipo de Tratamiento"
+
+msgid "Whitening"
+msgstr "Blanqueamiento"
+
+msgid "X-Ray"
+msgstr "Radiografía"
+
+msgid "Description"
+msgstr "Descripción"
+
+msgid "Product/Service"
+msgstr "Producto/Servicio"
+
+msgid "Quantity"
+msgstr "Cantidad"
+
+msgid "Unit Price"
+msgstr "Precio Unitario"
+
+msgid "Subtotal"
+msgstr "Subtotal"
+
+msgid "Planned"
+msgstr "Planificado"
+
+msgid "Clinical Notes"
+msgstr "Notas Clínicas"
+
+msgid "Medical Document"
+msgstr "Documento Médico"
+
+msgid "Document Name"
+msgstr "Nombre del Documento"
+
+msgid "Document Type"
+msgstr "Tipo de Documento"
+
+msgid "Periapical X-Ray"
+msgstr "Radiografía Periapical"
+
+msgid "Panoramic X-Ray"
+msgstr "Radiografía Panorámica"
+
+msgid "Bitewing X-Ray"
+msgstr "Radiografía Bitewing"
+
+msgid "Cephalometric X-Ray"
+msgstr "Radiografía Cefalométrica"
+
+msgid "Intraoral Photo"
+msgstr "Fotografía Intraoral"
+
+msgid "Extraoral Photo"
+msgstr "Fotografía Extraoral"
+
+msgid "Informed Consent"
+msgstr "Consentimiento Informado"
+
+msgid "Prescription"
+msgstr "Receta"
+
+msgid "Lab Results"
+msgstr "Resultados de Laboratorio"
+
+msgid "Uploaded By"
+msgstr "Subido Por"
+
+msgid "Directed To (Dentist)"
+msgstr "Dirigido A (Dentista)"
+
+msgid "Related Appointment"
+msgstr "Cita Relacionada"
+
+msgid "Related Treatment"
+msgstr "Tratamiento Relacionado"
+
+msgid "Attachments"
+msgstr "Adjuntos"
+
+msgid "Main Image"
+msgstr "Imagen Principal"
+
+msgid "Image Filename"
+msgstr "Nombre del Archivo de Imagen"
+
+msgid "Pending Review"
+msgstr "Pendiente de Revisión"
+
+msgid "Reviewed"
+msgstr "Revisado"
+
+msgid "Archived"
+msgstr "Archivado"
+
+msgid "Confidential"
+msgstr "Confidencial"
+
+msgid "Dentist Notes"
+msgstr "Notas del Dentista"
+
+msgid "Dental Budget"
+msgstr "Presupuesto Dental"
+
+msgid "Budget Type"
+msgstr "Tipo de Presupuesto"
+
+msgid "Preventive"
+msgstr "Preventivo"
+
+msgid "Corrective"
+msgstr "Correctivo"
+
+msgid "Aesthetic"
+msgstr "Estético"
+
+msgid "Orthodontic"
+msgstr "Ortodóntico"
+
+msgid "Receptionist"
+msgstr "Recepcionista"
+
+msgid "Radiologist / Assistant"
+msgstr "Radiólogo / Asistente"
+
+msgid "Clinic Administrator"
+msgstr "Administrador de Clínica"
+
+msgid "You have a new %s from patient %s pending review."
+msgstr "Tienes una nueva %s del paciente %s pendiente de revisión."
+
+msgid "Document %s has been reviewed by %s."
+msgstr "El documento %s ha sido revisado por %s."
+
+msgid "Warning: This patient has registered allergies:\n%s"
+msgstr "Advertencia: Este paciente tiene alergias registradas:\n%s"
+
+msgid "Patient Allergies"
+msgstr "Alergias del Paciente"
+
+msgid "The dentist %s already has an appointment in this time slot."
+msgstr "El dentista %s ya tiene una cita en este horario."
+
+msgid "Appointment: %s - %s"
+msgstr "Cita: %s - %s"

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Odontograma Form -->
+        <record id="view_clinica_odontograma_form" model="ir.ui.view">
+            <field name="name">clinica.odontograma.form</field>
+            <field name="model">clinica.odontograma</field>
+            <field name="arch" type="xml">
+                <form string="Odontograma">
+                    <header>
+                        <button name="action_confirmar" string="Confirmar" type="object"
+                                class="btn-primary"
+                                attrs="{'invisible': [('state', '!=', 'borrador')]}"/>
+                        <button name="action_borrador" string="Regresar a Borrador" type="object"
+                                attrs="{'invisible': [('state', '!=', 'confirmado')]}"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="borrador,confirmado"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="paciente_id"/>
+                                <field name="fecha"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Piezas Dentales">
+                                <field name="lineas_ids">
+                                    <list editable="bottom">
+                                        <field name="numero_pieza"/>
+                                        <field name="estado"/>
+                                        <field name="superficie"/>
+                                        <field name="notas"/>
+                                    </list>
+                                </field>
+                            </page>
+                            <page string="Notas Generales">
+                                <field name="notas_generales" placeholder="Observaciones generales del odontograma..."/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <chatter/>
+                </form>
+            </field>
+        </record>
+
+        <!-- Odontograma List -->
+        <record id="view_clinica_odontograma_list" model="ir.ui.view">
+            <field name="name">clinica.odontograma.list</field>
+            <field name="model">clinica.odontograma</field>
+            <field name="arch" type="xml">
+                <list string="Odontogramas"
+                      decoration-success="state == 'confirmado'"
+                      decoration-muted="state == 'borrador'">
+                    <field name="paciente_id"/>
+                    <field name="fecha"/>
+                    <field name="notas_generales"/>
+                    <field name="state" widget="badge"
+                           decoration-success="state == 'confirmado'"
+                           decoration-muted="state == 'borrador'"/>
+                </list>
+            </field>
+        </record>
+
+        <!-- Odontograma Action -->
+        <record id="action_clinica_odontograma" model="ir.actions.act_window">
+            <field name="name">Odontogramas</field>
+            <field name="res_model">clinica.odontograma</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+    </data>
+</odoo>

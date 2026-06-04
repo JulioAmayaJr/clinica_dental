@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Radiologo: solo ve documentos que él mismo subió -->
+        <record id="rule_documento_radiologo_read" model="ir.rule">
+            <field name="name">Radiologist: read own documents</field>
+            <field name="model_id" ref="model_clinica_documento_medico"/>
+            <field name="groups" eval="[(4, ref('clinica_dental.group_radiologo'))]"/>
+            <field name="domain_force">[('subido_por', '=', user.id)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- Dentista: ve documentos dirigidos a él -->
+        <record id="rule_documento_dentista_read" model="ir.rule">
+            <field name="name">Dentist: read documents directed to them</field>
+            <field name="model_id" ref="model_clinica_documento_medico"/>
+            <field name="groups" eval="[(4, ref('clinica_dental.group_dentista'))]"/>
+            <field name="domain_force">[('dentista_id', '=', user.id)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- Admin: sin restricción (regla global que permite todo) -->
+        <record id="rule_documento_admin_read" model="ir.rule">
+            <field name="name">Admin: full access to all documents</field>
+            <field name="model_id" ref="model_clinica_documento_medico"/>
+            <field name="groups" eval="[(4, ref('clinica_dental.group_admin'))]"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+        </record>
+
+        <!-- Recepcionista: ve citas y pacientes pero no documentos confidenciales -->
+        <record id="rule_documento_recepcionista_read" model="ir.rule">
+            <field name="name">Receptionist: cannot see confidential documents</field>
+            <field name="model_id" ref="model_clinica_documento_medico"/>
+            <field name="groups" eval="[(4, ref('clinica_dental.group_recepcionista'))]"/>
+            <field name="domain_force">[('es_confidencial', '=', False)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+    </data>
+</odoo>
